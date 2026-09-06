@@ -1,40 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>RaubMaUnblocked</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Unblocked Games Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f14;
+      color: white;
+    }
+
+    header {
+      background: #1a1a22;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 2px solid #2a2a35;
+    }
+
+    #games {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .game {
+      background: #1a1a22;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+      background: #252533;
+    }
+
+    .game img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .game h3 {
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="topbar">
-  <div class="logo">RaubMaUnblocked</div>
-  <input class="search" type="text" placeholder="Search games...">
-</header>
+  <header>
+    🎮 Unblocked Games Hub
+  </header>
 
-<div class="layout">
+  <div id="games">
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h3>Navigation</h3>
-    <a href="#">Home</a>
-    <a href="#">Library</a>
-    <a href="#">Random</a>
+    <!-- Drift King -->
+    <a href="drift-king-embed.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=Drift+King">
+      <h3>Drift King</h3>
+    </a>
 
-    <h3>Popular</h3>
-    <a href="drift-king-embed.html">Drift King</a>
-    <a href="eagle-craft-embed.html">Eagle Craft</a>
-    <a href="granny-embed.html">Granny</a>
-  </aside>
+    <!-- Eagle Craft -->
+    <a href="eagle-craft-embed.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=Eagle+Craft">
+      <h3>Eagle Craft</h3>
+    </a>
 
-  <!-- Main Content -->
-  <main class="content">
-    <h1>RaubMaUnblocked</h1>
-    <p class="desc">
-      A collection of browser-based games available to play instantly.
-    </p>
+    <!-- Granny -->
+    <a href="granny-embed.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=Granny">
+      <h3>Granny</h3>
+    </a>
 
+    <!-- MotoX3M -->
+    <a href="moto-x3m-pool-party-embed.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=MotoX3M">
+      <h3>MotoX3M</h3>
+    </a>
+
+    <!-- Deadly Descent -->
+    <a href="horror/Deadly descent.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=Deadly+Descent">
+      <h3>Deadly Descent</h3>
+    </a>
+
+    <!-- Super Mario 64 -->
+    <a href="SuperMario64.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=SuperMario64">
+      <h3>Super Mario 64</h3>
+    </a>
+
+    <!-- Among Us -->
+    <a href="among us.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=Among+Us">
+      <h3>Among Us</h3>
+    </a>
+
+  </div>
+
+  <footer>
+    Made for school gaming 😎
+  </footer>
+
+  <script>
+    function openGame(page) {
+      window.location.href = "player.html?game=" + page;
+    }
+  </script>
+
+</body>
+
+</html>
     <div class="games">
 
       <a href="drift-king-embed.html" class="card">
