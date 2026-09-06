@@ -2,39 +2,145 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Unblocked Games Hub</title>
+<title>FAQ Wiki</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#0f0f14;
-  color:white;
+  font-family:Georgia, "Times New Roman", serif;
+  background:#f6f6f6;
+  color:#202122;
 }
 
+/* Top bar */
 header{
-  background:#1a1a22;
-  padding:15px;
-  text-align:center;
-  font-size:24px;
+  background:white;
+  border-bottom:1px solid #ccc;
+  padding:12px 20px;
+  font-size:22px;
   font-weight:bold;
-  border-bottom:2px solid #2a2a35;
 }
 
-#games{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
-  gap:20px;
+/* Layout */
+.container{
+  display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+  width:200px;
+  background:#f8f9fa;
+  border-right:1px solid #ccc;
+  padding:15px;
+}
+
+.sidebar h3{
+  font-size:14px;
+  margin-top:0;
+}
+
+.sidebar a{
+  display:block;
+  color:#0645ad;
+  text-decoration:none;
+  margin:5px 0;
+}
+
+.sidebar a:hover{
+  text-decoration:underline;
+}
+
+/* Main content */
+.content{
+  flex:1;
   padding:20px;
 }
 
-.game{
-  background:#1a1a22;
-  border-radius:10px;
+/* Game list */
+.game-list a{
+  display:block;
+  color:#0645ad;
+  margin:6px 0;
+  text-decoration:none;
+}
+
+.game-list a:hover{
+  text-decoration:underline;
+}
+
+/* Search bar */
+.search{
+  margin-bottom:15px;
+}
+
+.search input{
+  width:100%;
+  padding:6px;
+  border:1px solid #aaa;
+}
+
+/* Footer */
+footer{
+  border-top:1px solid #ccc;
   padding:10px;
+  font-size:12px;
   text-align:center;
-  transition:0.2s;
-  cursor:pointer;
+  background:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+FAQ Wiki
+</header>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Navigation</h3>
+    <a href="#">Main page</a>
+    <a href="#">All pages</a>
+    <a href="#">Random page</a>
+
+    <h3>Games</h3>
+    <a href="drift-king-embed.html">Drift King</a>
+    <a href="eagle-craft-embed.html">Eagle Craft</a>
+    <a href="granny-embed.html">Granny</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <div class="search">
+      <input type="text" placeholder="Search... (fake)">
+    </div>
+
+    <h1>Game Library</h1>
+    <p>This site contains a collection of browser-based interactive experiences.</p>
+
+    <div class="game-list">
+      <a href="drift-king-embed.html">Drift King</a>
+      <a href="eagle-craft-embed.html">Eagle Craft</a>
+      <a href="granny-embed.html">Granny</a>
+      <a href="moto-x3m-pool-party-embed.html">MotoX3M</a>
+      <a href="horror/Deadly descent.html">Deadly Descent</a>
+      <a href="SuperMario64.html">Super Mario 64</a>
+      <a href="among us.html">Among Us</a>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+Content is for educational/demo purposes
+</footer>
+
+</body>
+</html>  cursor:pointer;
 }
 
 .game:hover{
