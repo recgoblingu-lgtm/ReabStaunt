@@ -1,31 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Restaurant Simulator</title>
+<meta charset="UTF-8">
+<title>Unblocked Games Hub</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f0f14;
+  color:white;
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+header{
+  background:#1a1a22;
+  padding:15px;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
+  border-bottom:2px solid #2a2a35;
+}
+
+#games{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.game{
+  background:#1a1a22;
+  border-radius:10px;
+  padding:10px;
+  text-align:center;
+  transition:0.2s;
+  cursor:pointer;
+}
+
+.game:hover{
+  transform:scale(1.05);
+  background:#252533;
+}
+
+.game img{
+  width:100%;
+  border-radius:8px;
+}
+
+.game h3{
+  margin:10px 0 5px;
+}
+
+footer{
+  text-align:center;
+  padding:10px;
+  font-size:12px;
+  color:#aaa;
+}
+</style>
 </head>
 
 <body>
 
-<div id="menu">
-  <h1>🍔 Restaurant Simulator</h1>
-  <button onclick="startGame()">Play</button>
+<header>
+🎮 Unblocked Games Hub
+</header>
+
+<div id="games">
+
+  <!-- Drift King -->
+  <div class="game" onclick="openGame('drift-king-embed.html')">
+    <img src="https://via.placeholder.com/300x180?text=Drift+King">
+    <h3>Drift King</h3>
+  </div>
+
+  <!-- Eagle Craft -->
+  <div class="game" onclick="openGame('eagle-craft-embed.html')">
+    <img src="https://via.placeholder.com/300x180?text=Eagle+Craft">
+    <h3>Eagle Craft</h3>
+  </div>
+
+  <!-- Granny -->
+  <div class="game" onclick="openGame('granny-embed.html')">
+    <img src="https://via.placeholder.com/300x180?text=Granny">
+    <h3>Granny</h3>
+  </div>
+
 </div>
 
-<div id="ui" style="display:none;">
-  💰 Money: <span id="money">0</span><br>
-  🍔 Order: <span id="order">None</span><br>
-  <button onclick="serve()">Serve Food</button>
-</div>
+<footer>
+Made for school gaming 😎
+</footer>
 
-<canvas id="game"></canvas>
-
-<script src="game.js"></script>
+<script>
+function openGame(page){
+  window.location.href = "player.html?game=" + page;
+}
+</script>
 
 </body>
 </html>
