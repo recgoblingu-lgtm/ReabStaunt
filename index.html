@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unblocked Games Hub</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
     body {
       margin: 0;
+      min-height: 100%;
       font-family: Arial, sans-serif;
-      background: #0f0f14;
       color: white;
+      background: #0f0f14;
+    }
+
+    /* GIF background layer */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: url("https://mir-s3-cdn-cf.behance.net/project_modules/source/8f444a91900373.5e3d63788609e.gif") center / cover no-repeat;
+      pointer-events: none;
+    }
+
+    /* Makes the game cards easier to read while keeping the GIF visible behind them */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background: rgba(15, 15, 20, 0.58);
+      pointer-events: none;
+    }
+
+    header,
+    #games,
+    footer {
+      position: relative;
+      z-index: 2;
     }
 
     header {
-      background: #1a1a22;
       padding: 15px;
       text-align: center;
       font-size: 24px;
       font-weight: bold;
-      border-bottom: 2px solid #2a2a35;
+      background: rgba(26, 26, 34, 0.86);
+      border-bottom: 2px solid rgba(42, 42, 53, 0.9);
+      backdrop-filter: blur(4px);
     }
 
     #games {
@@ -30,10 +64,126 @@
     }
 
     .game {
-      background: #1a1a22;
-      border-radius: 10px;
+      display: block;
       padding: 10px;
+      color: white;
       text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      background: rgba(26, 26, 34, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+      background: rgba(37, 37, 51, 0.96);
+    }
+
+    .game img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 300 / 180;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .game h3 {
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      padding: 10px;
+      color: #ddd;
+      font-size: 12px;
+      text-align: center;
+      background: rgba(15, 15, 20, 0.72);
+    }
+  </style>
+</head>
+
+<body>
+  <header>🎮 Unblocked Games Hub</header>
+
+  <div id="games">
+    <!-- Drift King -->
+    <a href="drift-king-embed.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsxHygliskIq19SPxHAIxEMxVUvpkifoLR1DW9AD7WA&amp;s=10/300x180?text=Drift+King" alt="Drift King">
+      <h3>Drift King</h3>
+    </a>
+
+    <!-- Eagle Craft -->
+    <a href="eagle-craft-embed.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvB-AwngQKtoj5Q8veM-uOEoefkqAXhaoaSZkIZwfQQ&amp;s/300x180?text=Eagle+Craft" alt="Eagle Craft">
+      <h3>Eagle Craft</h3>
+    </a>
+
+    <!-- Granny -->
+    <a href="granny-embed.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST-OFaIuf0v2NJGoMLX5upQ9f3IM60yserrUaSA62L8A&amp;s/300x180?text=Granny" alt="Granny">
+      <h3>Granny</h3>
+    </a>
+
+    <!-- MotoX3M -->
+    <a href="moto-x3m-pool-party-embed.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjJHFpU-f-wZe9nrdnnl0egoqMfE5sk03GU0sLvsHeg&amp;s=10/300x180?text=MotoX3M" alt="MotoX3M">
+      <h3>MotoX3M</h3>
+    </a>
+
+    <!-- Deadly Descent -->
+    <a href="horror/Deadly descent.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg77gtNSwWD8W3mqyfyayDPXoharqphBc4hp0jtgUoVA&amp;s/300x180?text=Deadly+Descent" alt="Deadly Descent">
+      <h3>Deadly Descent</h3>
+    </a>
+
+    <!-- Super Mario 64 -->
+    <a href="SuperMario64.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR17kqfu8f4anA0IaXB0OwdDBsHE54_hkhDvgmUx354A&amp;s=10/300x180?text=SuperMario64" alt="Super Mario 64">
+      <h3>Super Mario 64</h3>
+    </a>
+
+    <!-- Among Us -->
+    <a href="among us.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYNNTyzM3dQuiExO7DqEfFi6lwp1L1LsUh0zM0ATk_ug&amp;s=10/300x180?text=Among+Us" alt="Among Us">
+      <h3>Among Us</h3>
+    </a>
+
+    <!-- Rivals -->
+    <a href="Roblox/rivalsfps.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb_d5RoEzQr7810CNFmmQ6eW4KAiQfnRi2N7ev7J8HDw&amp;s=10/300x180?text=Rivals" alt="Rivals">
+      <h3>Rivals</h3>
+    </a>
+
+    <!-- Run 3 -->
+    <a href="Run-3-Unblocked.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNmzX-6uYQr1szGXrdH_eq08hvVtIAsQk65NGpDpSFQA&amp;s=10/300x180?text=Run3" alt="Run 3">
+      <h3>Run 3</h3>
+    </a>
+
+    <!-- 1v1.lol -->
+    <a href="1v1.lol.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0TMDwCVixfR0QfGp2xS0l3yUZ_quzwc2u-5zNTh1k7g&amp;s/300x180?text=1v1.lol" alt="1v1.lol">
+      <h3>1v1.lol</h3>
+    </a>
+
+    <!-- BaldisBasics -->
+    <a href="BaldisBasics.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxtafKXY-h17mQkXjnF7V9HqE4uY4dRvtgqUpW_-S0SA&amp;s=10/300x180?text=BaldisBasics" alt="BaldisBasics">
+      <h3>BaldisBasics</h3>
+    </a>
+
+    <!-- Subway Surfers -->
+    <a href="subway-surfers-game-only.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOx-u5qs40nEoQZPBoyLjfwIhR-bA3hY-l7cRy8xn3YQ&amp;s=10/300x180?text=SubwaySurfers" alt="Subway Surfers">
+      <h3>Subway Surfers</h3>
+    </a>
+  </div>
+
+  <footer>Made for gaming 😎</footer>
+</body>
+</html>
       transition: 0.2s;
       cursor: pointer;
       text-decoration: none;
